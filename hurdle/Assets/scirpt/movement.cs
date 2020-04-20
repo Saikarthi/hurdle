@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-    public Vector3 a = Vector3.zero;
+    
    // public float fa = 250f;
     public float sa = 12f;
     public Rigidbody r;
