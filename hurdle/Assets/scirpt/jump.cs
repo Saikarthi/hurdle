@@ -8,12 +8,13 @@ public class jump : MonoBehaviour
     public float jumpforce = 7.0f;
     public Rigidbody rb;
     public BoxCollider col;
+    public Animator a;
     public bool isgrounded = true;
 
   
     void Start()
     {
-        
+       
     }
 
 
@@ -22,6 +23,11 @@ public class jump : MonoBehaviour
         if(g() && Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector3.up * jumpforce, ForceMode.Impulse);
+            a.SetBool("jump", true);
+        }
+        else
+        {
+            a.SetBool("jump", false);
         }
     }
    
